@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
+  Call-workflow-B-in-local-repo:
+    uses: ./.github/workflows/workflow-B.yml
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
