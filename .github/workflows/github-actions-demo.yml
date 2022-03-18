@@ -5,6 +5,8 @@ jobs:
     uses: ./.github/workflows/workflow-B.yml
     with:
       username: Manisha
+    secrets:
+      envPAT: test
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
