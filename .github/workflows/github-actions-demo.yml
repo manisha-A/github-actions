@@ -3,6 +3,8 @@ on: [push]
 jobs:
   Call-workflow-B-in-local-repo:
     uses: ./.github/workflows/workflow-B.yml
+    with:
+      username: Manisha
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
