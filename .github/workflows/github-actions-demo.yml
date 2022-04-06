@@ -1,6 +1,12 @@
 name: GitHub Actions Demo
 on: [push]
 jobs:
+  Call-workflow-B-in-local-repo:
+    uses: ./.github/workflows/workflow-B.yml
+    with:
+      username: Manisha
+    secrets:
+      token: test
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
@@ -14,4 +20,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
       - run: echo "🍏 This job's status is ${{ job.status }}."
