@@ -20,4 +20,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
       - run: echo "🍏 This job's status is ${{ job.status }}."
